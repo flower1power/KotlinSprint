@@ -7,11 +7,11 @@ fun main(){
 
     println("""
         $year
-        $hour
-        $minute
+        ${String.format("%02d", hour)}
+        ${String.format("%02d", minute)}
     """.trimIndent())
 
     hour = 10
     minute = 55
-    println("$hour:$minute")
+    println(String.format("%02d:%02d", hour, minute))
 }
