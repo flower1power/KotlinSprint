@@ -1,13 +1,12 @@
 package org.example.lesson_4
 
-const val COUNT_TABLE = 13
+const val TOTAL_TABLES = 13
 
 fun main() {
-    val countReservedTablesToday = COUNT_TABLE
-    val countReservedTablesTomorrow = 9
-    val isFreeTablesToday = countReservedTablesToday < COUNT_TABLE
-    val isFreeTablesTomorrow = countReservedTablesTomorrow < COUNT_TABLE
+    val reservedTablesToday = 13
+    val reservedTablesTomorrow = 9
 
-    println("Доступность столиков на сегодня: ${isFreeTablesToday}\n" +
-            "Доступность столиков на завтра: ${isFreeTablesTomorrow}")
+    println(
+        "Доступность столиков на сегодня: ${reservedTablesToday < TOTAL_TABLES}\nДоступность столиков на завтра: ${reservedTablesTomorrow < TOTAL_TABLES}"
+    )
 }
