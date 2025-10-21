@@ -16,9 +16,9 @@ fun main() {
     val userYear = readln().toInt()
     val userAge = currentYear - userYear
 
-    val msg = when (userAge) {
-        in AGE_OF_MAJORITY..Int.MAX_VALUE -> FULL_ACCESS_MSG
-        16, 17 -> PARTIAL_ACCESS_MSG
+    val msg = when {
+        userAge > AGE_OF_MAJORITY -> FULL_ACCESS_MSG
+        userAge == 16 || userAge == 17 -> PARTIAL_ACCESS_MSG
         else -> NO_ACCESS_MSG
     }
 
